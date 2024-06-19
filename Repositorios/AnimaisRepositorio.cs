@@ -40,7 +40,7 @@ namespace Api.Repositorios
             }
             else
             {
-                // Atualize os valores com base nos valores do objeto 'animal'
+                
                 animais.AnimalNome = animal.AnimalNome;
                 animais.AnimalRaca = animal.AnimalRaca;
                 animais.AnimalTipo = animal.AnimalTipo;

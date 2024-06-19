@@ -31,7 +31,10 @@ namespace Api.Repositorios
             await _dbContext.SaveChangesAsync();
             return user;
         }
-
+        public async Task<UsuarioModel> Login(string email, string password)
+        {
+            return await _dbContext.Usuario.FirstOrDefaultAsync(x => x.UsuarioEmail == email && x.UsuarioSenha == password);
+        }
         public async Task<UsuarioModel> UpdateUsuario(UsuarioModel user, int id)
         {
             UsuarioModel users = await GetById(id);
